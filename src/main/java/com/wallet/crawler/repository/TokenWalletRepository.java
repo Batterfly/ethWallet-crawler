@@ -11,5 +11,5 @@ import org.springframework.data.repository.CrudRepository;
  * @date 2018/4/17
  */
 public interface TokenWalletRepository extends CrudRepository<TokenWallet, Long>, JpaRepository<TokenWallet, Long>, JpaSpecificationExecutor<TokenWallet> {
-
+    TokenWallet findByTokenIdAndAddress(long tokenId,String address);
 }
